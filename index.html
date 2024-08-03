@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <link href="../static/styles.css" rel="stylesheet" type="text/css" />
+    <title>Minh Hodler's Website</title>
+  </head>
+  <body>
+    <header class="bg-primary text-white p-3 mb-4">
+      <div class="container d-flex justify-content-between align-items-center">
+        <img
+          src="static/logo.png"
+          class="img-fluid"
+          alt="Logo"
+          style="height: 80px"
+        />
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="upload.html">Upload</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="bg-primary text-white text-center py-5">
+        <div class="container">
+          <h1 class="display-4">Minh Phan</h1>
+          <p class="lead">
+            Software Engineer | Tech Enthusiast | Content Creator
+          </p>
+          <a
+            href="https://www.linkedin.com/in/minhphann/"
+            target="_blank"
+            class="btn btn-light btn-lg"
+            >Connect on LinkedIn</a
+          >
+          <a
+            href="https://www.youtube.com/@minhhodler"
+            target="_blank"
+            class="btn btn-light btn-lg"
+            ><i class="fab fa-youtube"></i> Subscribe on YouTube</a
+          >
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="py-5">
+        <div class="container">
+          <h2>About Me</h2>
+          <p>
+            Welcome! I'm Minh Phan, a software engineer with a passion for tech
+            and content creation. I specialize in web development, data science,
+            and blockchain technology. With a background in computer science and
+            hands-on experience in AWS and other technologies, I strive to
+            create impactful solutions and share my knowledge through my YouTube
+            channel.
+          </p>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section class="bg-light">
+        <div class="container">
+          <h2>Work Experience</h2>
+          <div class="experience">
+            <div class="work-title">
+              <h3>Software Engineer</h3>
+              <img
+                src="https://www.logo.wine/a/logo/Amazon_Web_Services/Amazon_Web_Services-Logo.wine.svg"
+                alt="AWS Logo"
+                class="experience-logo"
+              />
+            </div>
+
+            <p><strong>Location:</strong> Seattle, USA</p>
+            <p>
+              As a full-time Software Engineer at Amazon Web Services (AWS), I
+              have been part of the Supply Chain Authentication / Portal Team.
+              My role involves developing secure and scalable web applications,
+              enhancing user authentication systems, and integrating AWS
+              services to optimize the user experience.
+            </p>
+            <ul>
+              <li>
+                <i class="fas fa-check-circle"></i> Developed and maintained a
+                high-traffic web portal...
+              </li>
+
+              <li>
+                <i class="fas fa-check-circle"></i> Implemented security best
+                practices, ensuring robust authentication and authorization
+                mechanisms.
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Collaborated with
+                cross-functional teams to design and deploy new features,
+                improving system performance and reliability.
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Contributed to the
+                continuous improvement of the team's development process by
+                adopting agile methodologies and DevOps practices.
+              </li>
+            </ul>
+            <p>
+              This experience has honed my skills in full-stack development,
+              cloud computing, and secure software engineering, while also
+              allowing me to work on projects that have a significant impact on
+              AWS customers and partners.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- YouTube Stats Section -->
+      <section class="py-5">
+        <div class="container">
+          <h2>YouTube Channel</h2>
+          <div class="row text-center">
+            <div class="col-md-6">
+              <div class="bg-primary text-white py-4 rounded">
+                <h3 id="subscriber-count">Loading...</h3>
+                <p>Subscribers</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="bg-primary text-white py-4 rounded">
+                <h3 id="view-count">Loading...</h3>
+                <p>Total Views</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+      <div class="container">
+        <p>&copy; 2024 Minh Phan. All rights reserved.</p>
+      </div>
+    </footer>
+    <script>
+      async function fetchYouTubeSubscribers() {
+        const apiKey = "<YOUR_API_KEY>";
+        const channelId = "<YOUR_CHANNEL_ID>";
+        const url = `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${channelId}&key=${apiKey}`;
+
+        try {
+          // Fetch data from googleapi
+          const response = await fetch(url);
+          const data = await response.json();
+          const statistics = data.items[0].statistics;
+          const subscriberCount = parseInt(statistics.subscriberCount, 10);
+          const viewCount = parseInt(statistics.viewCount, 10);
+
+          // Format numbers with commas
+          const formattedSubscriberCount = subscriberCount.toLocaleString();
+          const formattedViewCount = viewCount.toLocaleString();
+
+          document.getElementById("subscriber-count").textContent =
+            formattedSubscriberCount;
+          document.getElementById("view-count").textContent =
+            formattedViewCount;
+        } catch (error) {
+          console.error("Error fetching YouTube statistics:", error);
+          document.getElementById("subscriber-count").textContent = "Error";
+          document.getElementById("view-count").textContent = "Error";
+        }
+      }
+
+      fetchYouTubeSubscribers();
+    </script>
+  </body>
+</html>

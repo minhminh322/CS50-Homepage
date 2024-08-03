@@ -1,0 +1,227 @@
+body {
+  font-family: "Lora", serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.header {
+  background-color: #007bff;
+}
+
+.header img {
+  height: 60px;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: white;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .nav-link:focus {
+  color: #007bff;
+  /* background-color: white; */
+  border-radius: 5px;
+}
+
+.btn-light {
+  background-color: white;
+  border: 1px solid #007bff;
+  color: #007bff;
+}
+
+.btn-light:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+a {
+  color: #0073b1;
+  text-decoration: none;
+  font-weight: bold;
+}
+.statistics {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+.statistics span {
+  display: block;
+  margin-top: 10px;
+}
+
+/**
+ PORTFOLIO PAGE 
+ **/
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #6c63ff 0%, #4e54c8 100%);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero .lead {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero .btn-light {
+  border: none;
+  font-size: 1.2rem;
+  padding: 0.75rem 2rem;
+}
+
+/* About Section */
+.about {
+  background-color: #f9f9f9;
+  padding: 3rem 0;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Experience Section */
+.experience {
+  margin-top: 2rem;
+}
+
+.experience h3 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.experience-logo {
+  max-width: 80px;
+  /* margin-bottom: 1rem; */
+}
+
+.experience .work-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.experience h3 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin: 0;
+  color: #333;
+  letter-spacing: 0.05rem;
+  padding-right: 0.5rem;
+  border-right: 2px solid #dcdcdc;
+}
+.experience p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.experience ul {
+  list-style: none;
+  padding: 0;
+}
+
+.experience ul li {
+  padding-left: 2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* YouTube Stats Section */
+.youtube-stats {
+  background-color: #ffffff;
+}
+
+.youtube-stats .stats {
+  margin-top: 2rem;
+}
+
+.youtube-stats .stat {
+  margin-bottom: 1rem;
+}
+
+.youtube-stats .stat h3 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.youtube-stats .stat p {
+  font-size: 1.2rem;
+}
+
+/* Contact Section */
+.contact {
+  background-color: #f9f9f9;
+  padding: 3rem 0;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 1.5rem 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Custom Button Styles */
+.btn-light:hover {
+  background-color: #5a5ef7;
+  color: white;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero .lead {
+    font-size: 1.2rem;
+  }
+
+  .about h2,
+  .contact h2 {
+    font-size: 2rem;
+  }
+}
